@@ -1,0 +1,802 @@
+\documentclass[dvipdfmx,uplatex]{jsarticle}
+\usepackage{./sty/macros}
+
+\begin{document}
+\section{数学的統語論,意味論}
+（全体的な方針）
+\begin{itemize}
+	\item $必要条件で絞りたい気持ち→しらみつぶし$
+	\item $式をよく見る,実験$
+	\item $一文字について解く\Rightarrow（\sqrt{}や分数）\in \bm{Z}$
+	\item $元の式だけでなく$
+	\begin{itemize}
+		\item $展開した式$
+		\item $一部をまとめた式$
+		\item $微分した式$
+		\item $積分した式$
+		\item $具体的に代入した式$
+		\item $特別な値:0,1, \infty を代入した式$
+		\item $移行した式$
+		\item $二乗した式$
+		\item $図形的関係$
+		\item $などが見えるか$
+	\end{itemize}
+	\item $定数分離$
+	\item $鋭角では三角関数は図形から求めた方が早い$
+	\item $ベクトルと面積公式$
+	\item $図形問題は初等幾何,ベクトル、座標で$
+	\item $初等幾何$
+	\begin{itemize}
+		\item $合同,相似$
+		\item $メネラウス,チェバ$
+		\item $方べきの定理$
+		\begin{itemize}
+			\item $ \Leftrightarrow 相似$
+			\item $ \Leftrightarrow 円周角が等しい$
+			\item $ \Leftrightarrow 同一円周上にある$
+		\end{itemize}
+		\item $接弦定理$
+		\item $中心角,円周角の関係$
+		\item $正弦定理,余弦定理$
+	\end{itemize}
+	\item $帰納法$
+\end{itemize}
+
+\section{集合論}
+\begin{itemize}
+	\item $ |A \cup B| = |A| + |B| - |A \cap B|$
+\end{itemize}
+
+\section{整数論}
+\begin{itemize}
+	\item（事実）
+	\item $ 互いに素$
+	\begin{itemize}
+		\item $ 連続2整数は互いに素である$
+		\item $ 0 と互いに素となる整数は 1 と −1 だけであり,また任意の整数と互いに素となる整数も 1 と −1 だけである。$
+		\item $ 異なる二つの素数は互いに素であり,連続する二つの整数も互いに素である。$
+		\item $ 2 以上の整数は,その（自身を含む）倍数や 2 以上の約数と互いに素でない。$
+		\item $ a と b_1,a と b_2 がそれぞれ互いに素ならば、a と b_1b_2 も互いに素である。$
+		\item $ 以下は,整数 a, b が互いに素であることと同値な条件である。$
+		\begin{itemize}
+			\item $ a, b を共に割り切る素数が存在しない。$
+			\item $ ax + by = 1 を満たす整数 x, y が存在する。（ベズーの等式を参照）$
+			\item $ b は a を法とする逆数をもつ。即ち by ≡ 1 (mod a) を満たす整数 y が存在$
+				\item $別の言い方をすれば,b は a を法とする剰余類環 Z/aZ の単元となっている。$
+			\item $ a, b の最小公倍数 lcm(a, b) が積 ab に等しい。$
+			\item $ a, b の最大公約数 gcd(a, b) が 1 に等しい。$
+			\item $ 2a − 1 と 2b − 1 が互いに素。$
+		\end{itemize}
+	\end{itemize}
+	\item $ 公倍数,公約数$
+	\begin{itemize}
+		\item $ 最小公倍数(least common multiple): lcm(a,b)$
+		\item $ 最大公約数(greatest common divisor): gcd(a,b)$
+		\item $ 一般に ab gq l = ga'b' gq a, b$
+		\item $ lg = g^2a'b' = ab$
+	\end{itemize}
+	\item $ 平方数の階差は増加関数$
+	\item $ 平方剰余$
+	\begin{itemize}
+		\item $ 平方数の剰余は任意の値を取らない$
+	\end{itemize}
+	\item $ 二項係数nCrは整数である$
+	\begin{itemize}
+		\item $ ルジャンドルの定理$
+		\item $ 帰納法$
+	\end{itemize}
+	\item $ 倍数判定$
+	\item $ ユークリッドの互除法$
+	\begin{itemize}
+		\item $ 割り算の等式：a=bq+r において，$
+		\item $ 「a と b の最大公約数」$
+		\item $ ＝「b と r の最大公約数」$
+	\end{itemize}
+	\item $ フェルマーの小定理$
+	\begin{itemize}
+		\item $ a^{a-1} \mod 1 (mod p)$
+	\end{itemize}
+\end{itemize}
+
+\section{組合せ論}
+\begin{itemize}
+	\item $ _nC_k = _{n-1}C_{k-1} + _{n-1}C_{k}$
+	\begin{itemize}
+		\item $ ある人を含む時と含まない時で排反$
+		\item $ 階差に変形して: Σ_k {}_k C_n$
+		\item $ モンモールの問題$
+	\end{itemize}
+\end{itemize}
+
+\section{因数分解}
+\begin{itemize}
+	\item $ x^n - y^n = (x - y)(x^{n - 1} + x^{n - 2}y + … + xy^{n - 2} + y^{n - 1}) [25]$
+	\begin{itemize}
+		\item $ 等比数列の和$
+	\end{itemize}
+\end{itemize}
+
+\section{整式・多項式}
+\begin{itemize}
+	\item $ 除法原理,剰余の定理、二項定理、微分（積分）して比較$
+	\item $ 整式a_nx^n+...+a_1x+a_0=0(a_n≠0)が有理解を持つとき解の候補は±(a_0の約数)/(a_nの約数)$
+	\begin{itemize}
+		\item $ とりわけa_n=1の下で整式が有理数解を持つならば整数解を持つ$
+	\end{itemize}
+	\item $ 解と係数の関係$
+	\begin{itemize}
+		\item $ 基本対称式$
+	\end{itemize}
+	\item $ 既約分数の一意性:分数が等しいとはどういうことか$
+	\begin{itemize}
+		\item $ 二つの有理数 a/b, c/d（a, b, c, d は整数で b, d はいずれも 0 でない）が等しいとは,整数の等式ad - bc = 0が成り立つことを言う$
+		\item $ 可約でないこと$
+	\end{itemize}
+	\item $ 多項式の一意性$
+	\item $ 範囲,上限、下限$
+	\begin{itemize}
+		\item $ 相加平均相乗平均の関係$
+		\begin{itemize}
+			\item $ (‘20東工大実践)$
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+\section{ベクトル}
+\begin{itemize}
+	\item $ ベクトルで処理か図形的処理か$
+	\item $ 図形$
+	\begin{itemize}
+		\item $ 大きさが一定;円$
+		\item $ AP・BP = 0 ;AB直径$
+		\item $ n・AP = 0 ;Pはnに垂直でAを通る直線上$
+	\end{itemize}
+	\item $ ベクトルの平方完成$
+	\item $ 分点公式でベクトルを纏める$
+	\item $ ベクトル三角形の面積$
+	\begin{itemize}
+		\item $ \frac{1}{2}|a||b| \sin A$
+		\item $ \frac{1}{2}(|a|^2|b|^2 - (a \cdot b)^2)^{½}$
+	\end{itemize}
+	\item $ 内積の利用$
+	\begin{itemize}
+		\item $ 不等式$
+	\end{itemize}
+\end{itemize}
+
+\section{複素数}
+\begin{itemize}
+	\item $ 図形$
+	\begin{itemize}
+		\item $ 直線$
+		\begin{itemize}
+			\item $ \bar{b} z + b \bar{z}+ a = 0 (b \neq 0) でP(z)はB(b)を通りOBに垂直な直線を成す(教科書では足りない:類題20)$
+		\end{itemize}
+	\end{itemize}
+	\item $ 複素数の偏角$
+		\begin{itemize}
+			\item $ 2 \pi の任意の整数倍の差を除いて次の等式が成り立つ：$
+			\begin{itemize}
+				\item $ \arg zw \equiv \arg z + \arg w$
+				\item $ \arg \frac{z}{w} \equiv \arg z − \arg w$
+				\begin{itemize}
+					\item $ (何れも mod 2π)$
+				\end{itemize}
+			\end{itemize}
+		\item $ |z| \cos \arg z = \mathrm{Re} z$
+		\item $ |z| \sin \arg z = \mathrm{Im} z$
+		\item $ \arg \overline{z} = - \arg z$
+		\item $ \arg 0 は不定$
+	\end{itemize}
+	\item $ 複素 \Leftrightarrow 座標$
+	\begin{itemize}
+		\item $ B_n(b_n)とおく (b_n \in \bm{C})$
+		\item $ （関連書籍の記述を読む）$
+		\item $ ベクトルと複素数を同一視して...$
+	\end{itemize}
+	\item $ |a| = 1 \Leftrightarrow \bar{a} = a^{-1} $
+	\item $ |1 - a| = \sqrt{(1 - \cos^2 x)^2 + \sin^2 x)} = 2 \sin \frac{x}{2}$
+	\item $ (z2-z1)/(z2-z1) =$
+	\item $ 正三角形\Leftrightarrow(z2-z1)2+(z3-z2)2+(z1-z3)2=0$
+	\begin{itemize}
+		\item $ 三角形ABCとBCAが相似$
+		\item $ ω^2α+ωβ+γ=0$
+	\end{itemize}
+	\item $ 正方形$
+	\item $ 大きさの等しい極形式の和は1つの極形式に直せる$
+	\item $ 相反方程式の利用$
+	\item $ 教科書では足りない:$
+	\begin{itemize}
+		\item $ ex14$
+	\end{itemize}
+	\item $ アポロニウスの円$
+	\begin{itemize}
+		\item $ |z-a| = k |z-b| は二点A(a),B(b)が成す線分をk:1に内分する点C,k:1に外分する点Dを直径の端点とする円を描く$
+		\item $  |z-a| = k |z-b| , |z-a| : |z-b| = k : 1$
+	\end{itemize}
+	\item $ 図形条件$
+	\begin{itemize}
+		\item $ 直交条件$
+		\item $ 平行条件$
+		\item $ 線上条件$
+		\item $ 垂線の足$
+		\item $ 共円,共線条件$
+		\begin{itemize}
+			\item $ 異なる4点が同一円又は同一直線を成すことは \frac{z_1-z_3}{z_2-z_3} \cdot \frac{z_2-z_4}{z_1-z_4}が0,1以外の実数であることに同値$
+			\item $ 九点円$
+		\end{itemize}
+	\end{itemize}
+	\item $ トレミーの定理$
+	\item $ シムソンの定理$
+	\item $ 一次分数変換$
+	\begin{itemize}
+		\item $ 円を円または直線に,直線を直線または円に写す(円円対応)$
+		\begin{itemize}
+			\item $ 反転幾何$
+		\end{itemize}
+	\end{itemize}
+	\item $ ジューコフスキー変換$
+	\begin{itemize}
+		\item $ w = \frac{1}{2} \left( z + \frac{1}{z} \right)$
+	\end{itemize}
+\end{itemize}
+
+\section{三角関数}
+\begin{itemize}
+	\item $ チェビシェフ多項式: \cos nθ は \cos θ の n 次多項式で表せる$
+	\item $ 倍角公式で次数下げ$
+	\item $ 基本不等式$
+	\begin{itemize}
+		\item $ 0 < x < π/2 ⇒ \sin x < x < \tan x$
+	\end{itemize}
+	\item $ 角度を加減すると変数の場所が減る場合$
+	\begin{itemize}
+		\item $ 和積の利用$
+		\begin{itemize}
+			\item $ E.g. (XSk115)$
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+\section{数列}
+\begin{itemize}
+	\item $ 係数を複素数と見る$
+	\begin{itemize}
+		\item $ a_{n+1} = -a_n + 2n の一般項には (-1)^2 = (\cos \pi + \sin \pi)^2 が含まれるだろう$
+		\begin{itemize}
+			\item $ 偶奇に分ける(一つ飛ばしの一般項)$
+		\end{itemize}
+	\end{itemize}
+	\item $ a_{n+2} = a_{n+1} - a_n$
+	\begin{itemize}
+		\item $ x^2=x-1 より\left(\frac{1\pm\sqrt{3}}{2}\right) = (\cos \pi/3 + \sin \pi/3)^2 が含まれる$
+		\item $ 3の剰余類で分類し立式$
+	\end{itemize}
+\end{itemize}
+
+\section{存在条件}
+\begin{itemize}
+	\item $ 列挙$
+	\item $ 方程式の立式 \Rightarrow 解の存在$
+	\begin{itemize}
+		\item $ 実数解の存在における中間値の定理の利用$
+		\item $ 唯一の解: 導関数の単調性$
+	\end{itemize}
+	\item $ 部屋割り論法$
+	\item $ 順像法,逆像法もこの類$
+	\begin{itemize}
+		\item $ 特に大体の逆像法は2次,3次方程式の解の個数、解の配置問題に帰着できる$
+		\item $ (パラメータ) = f(x,y) の形で同値性の議論をする$
+	\end{itemize}
+\end{itemize}
+
+\section{全称}
+\begin{itemize}
+	\item $ 整数範囲$
+	\begin{itemize}
+		\item $ 帰納法$
+	\end{itemize}
+	\item $ 実数範囲$
+\end{itemize}
+
+\section{解析}
+\begin{itemize}
+	\item $ 関数の凸性$
+	\begin{itemize}
+		\item $ 凸不等式（イェンゼンの不等式）$
+		\begin{itemize}
+			\item $ 接線評価$
+			\item $ Cf. 凸解析$
+			\begin{itemize}
+				\item $ ルジャンドル変換$
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+	\item $ 偶関数と奇関数$
+	\begin{itemize}
+		\item $ 曲線Cが [(x,y) \in C ならば (-x,y) \in C] であることをいう$
+	\end{itemize}
+	\item $ 増加,減少の定義$
+	\begin{itemize}
+		\item $ 「導関数が正⇒その区間で増加関数」を示せ$
+		\begin{itemize}
+			\item $ 平均値の定理を用いる$
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\subsection{（有名）}
+\begin{itemize}
+	\item $ サイクロイド$
+	\begin{itemize}
+		\item $ アステロイド$
+		\item $ ベクトルと媒介変数表示を用いた証明$
+		\begin{itemize}
+			\item $ a = r(\cos t, \sin t)$
+			\item $ 曲線の長さ$
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\subsection{（不等式処理の定石）}
+\begin{itemize}
+	\item $ 不等式$
+	\begin{itemize}
+		\item $ 相加相乗平均$
+		\item $ コーシー・シュワルツの不等式$
+		\item $ 平均値の定理$
+		\item $ 面積評価$
+		\begin{itemize}
+			\item $ 見立て$
+		\end{itemize}
+		\item $ 凸不等式（イェンゼンの不等式）$
+		\begin{itemize}
+			\item $ 接線評価$
+		\end{itemize}
+		\item $ (左辺) - (右辺) の増減$
+		\item $ F(a,b) と F(b,a)の評価$
+		\begin{itemize}
+			\item $ f(a) と f(b)に帰着して議論$
+			\begin{itemize}
+				\item $ 指数⇔対数$
+				\item $ 交換式の変数交換$
+				\item $ 斉次化$
+			\end{itemize}
+		\end{itemize}
+		\item $ Cf. 対称斉次な不等式$
+		\begin{itemize}
+			\item $ ]Muirheadの不等式$
+			\item $ Schurの不等式$
+			\item $ チェビシェフの不等式$
+		\end{itemize}
+		\item $ Cf. Nesbittの不等式$
+	\end{itemize}
+	\item $ 実数文字と整数文字を含む不等式$
+	\begin{itemize}
+		\item $  (XSk310)$
+		\item $ (1998 東大文系)$
+	\end{itemize}
+\end{itemize}
+\subsection{（最大値最小値解析の定石）}
+\begin{itemize}
+	\item $ 割り算で簡素化$
+	\begin{itemize}
+		\item $ D(分母) <= D(分子) なら帯分数化$
+	\end{itemize}
+	\item $ 平方完成$
+	\item $ 相加平均相乗平均の関係$
+	\item $ 同次式の斉次化$
+	\item $ 2変数関数のmax,min: F(x,y)$
+	\begin{itemize}
+		\item $ 領域の図示と共有点（逆像的）$
+		\begin{itemize}
+			\item $ 線形計画法$
+			\item $ 定数分離$
+			\item $ 直線分離$
+		\end{itemize}
+		\item $ 予選決勝法（順像的）$
+		\begin{itemize}
+			\item $ 一文字固定したmax,minを動かす$
+			\begin{itemize}
+				\item $ (XSk316) x,y \in [-1,1]で 1-ax-by-axy の \min が正となる(a,b)の領域$
+				\item $ X,yの対象式でも一文字固定がよいときもある$
+				\item $ m = \min\{A, B, C, D\}$
+				\item $ 線形の最大最小は区間の端である$
+			\end{itemize}
+			\item $ Cf. 偏微分$
+			\begin{itemize}
+				\item $ ラグランジュの未定乗数法$
+				\item $ 停留値,最適化問題$
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\subsection{（関数解析: 極限評価）}
+\begin{itemize}
+	\item $ 極限公式$
+	\begin{itemize}
+		\item $ \frac{\sin a}{a} \to 1 (a \to 0)$
+		\item $ \frac{1 - \cos a}{a^2} \to \frac{1}{2} (a \to 0)$
+		\item $ \frac{\tan a}{a} \to 1(a \to 0)$
+		\item $ \frac{e^x -1}{x} \to 1 (x \to 0)$
+		\begin{itemize}
+			\item $ 自然対数の底の定義の利用$
+			\item $ y = e^x の x=0 付近の微分係数と見ることができる$
+		\end{itemize}
+		\item $ \frac{\log (1 + x)}{x} \to 1 (x \to 0)$
+		\item $ \lim_{x \to \infty} \frac{x^n}{e^x} = 0$
+		\begin{itemize}
+			\item $ e^x > \sum \frac{x^k}{k!} を示す$
+			\begin{itemize}
+				\item $ マクローリン展開$
+			\end{itemize}
+		\end{itemize}
+		\item $ \lim_{x \to \infty} \frac{\log x}{x^n} =0$
+		\item $ \lim_{x \to +0} x^n \log x = 0$
+		\begin{itemize}
+			\item $ x = 1/t と置換して上に帰着$
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\subsection{（方針）}
+\begin{itemize}
+	\item $ |a_{n+1} - α| < |a_{n} - α| \times r$
+	\begin{itemize}
+		\item $ 同型不等式での評価$
+		\item $ 大体帰納法$
+	\end{itemize}
+	\item $ 漸化式の関数的側面$
+	\begin{itemize}
+		\item $ 平均値の定理の利用$
+		\begin{itemize}
+			\item $ \frac{f(a_n) - f(α)}{a_n - α} = f'(c)$
+			\item $ f'(c) < 1なるものを見つけると同型評価できる$
+		\end{itemize}
+	\end{itemize}
+	\item $ 0/0型不定形を(0+0+...+0)/0と見る$
+	\item $ \lim \frac{f(x)}{g(x)} = const. ∧ \lim g(x) = 0 ⇒ \lim f(x) = 0$
+	\begin{itemize}
+		\item $ 両辺にg(x)を掛けると容易に得る$
+	\end{itemize}
+	\item $ \lim f(x)g(x) = const. かつ \lim f(x) = \infty \rightarrow \lim g(x) = 0$
+	\item $ その他不定形$
+	\begin{itemize}
+		\item $ (無限)/(無限): 分子,分母を主要項で割る$
+		\item $ (無限)-(無限): 主要項で括る$
+		\item $ {(1に近づく)}^{(無限)}: eの定義を利用or対数をとる$
+	\end{itemize}
+	\item $ 方程式の解の極限: f_n(x) = 0$
+	\begin{itemize}
+		\item $ 解を求める$
+		\begin{itemize}
+			\item $ 評価$
+			\item $ 三角関数の振る舞いから引数の振る舞いを調べる$
+		\end{itemize}
+		\item $ 定数分離$
+		\item $ 式中の発散量,収束量などに着目$
+	\end{itemize}
+	\item $ 和の極限: \lim \sum a_k$
+	\begin{itemize}
+		\item $ これが収束するには a_k \to 0 が必要$
+		\item $ 無限和は部分和の極限で定義される$
+		\begin{itemize}
+			\item $ \frac{1}{k} - \frac{1}{k+1} など$
+		\end{itemize}
+		\item $ 部分和が求まらないときは区分求積法$
+		\begin{itemize}
+			\item $ \frac{1}{n}を括り出す$
+			\item $ \lim_{n \to \infty} \sum^n_{k = 1} \frac{1}{k} = \infty$
+		\end{itemize}
+		\item $ \sum_k f(k) の評価は基本的にグラフ,面積を用いる$
+		\begin{itemize}
+			\item $ \int^b_a f(x)dx < \sum f(k) < \int^d_c f(x)dx$
+		\end{itemize}
+	\end{itemize}
+	\item $ 積の極限: n個の積の極限は \log をとり和に変える$
+	\begin{itemize}
+		\item $ 間接評価$
+	\end{itemize}
+\end{itemize}
+
+\section{微分}
+\begin{itemize}
+	\item $ 連続と微分可能性$
+	\begin{itemize}
+		\item $ 「f(x + y) = f(x) + f(y)を満たす f(x) が x = 0 で微分可能なとき, f(x) は実数全体で微分可能である.」[12]例II$
+		\item $ Cf. ワイエルシュトラス関数 - 連続だがいたるところで微分不可能な関数の例$
+	\end{itemize}
+	\item $ 区間端点での微分不可能性$
+	\item $ 微分係数が煩雑な時は定義に戻った方が良い？(ZS108)$
+	\begin{itemize}
+		\item $ e.g. f(x+y) = f(x) + f(y) の微分可能性$
+	\end{itemize}
+\end{itemize}
+
+\section{積分}
+\subsection{（公式）}
+\begin{itemize}
+	\item $ \int^b_a (x - a)(x - b)dx = - \frac (b - a)^3$
+\end{itemize}
+\subsection{（方針）}
+\begin{itemize}
+	\item $ 図形と見て計算$
+	\item $ \sqrt{} 内をまるごと置換$
+	\item $ \int g(f(x))f'(x)dx 型$
+	\item $ \log$
+	\begin{itemize}
+		\item $ \log は大抵部分積分$
+		\item $ \int \frac{f’(x)}{f(x)}dx = \log |f(x)| + C$
+	\end{itemize}
+	\item $ 三角関数$
+	\begin{itemize}
+		\item $ 一般に, \int^{\frac{\pi}{2}}_0 F(\sin \theta, \cos \theta)d \theta = \int^{\frac{\pi}{2}}_0 F(\cos \theta, \sin \theta)d \theta$
+		\begin{itemize}
+			\item $ より一般に, \int^a_0 f(x)dx = \int^a_0 f(a-x)dx$
+		\end{itemize}
+		\item $ \tan などに置換$
+		\begin{itemize}
+			\item $ E.g. \frac{1}{x^2+2x+2} = \frac{1}{\tan^2 \theta + 1}$
+		\end{itemize}
+		\item $ \arcsin, \arccos, \arctan への置換$
+		\begin{itemize}
+			\item $ (\arcsin x)’ = \frac{1}{\sqrt{1 - x^2}}$
+			\item $ (\arctan x)’ = \frac{1}{1 + x^2}$
+		\end{itemize}
+		\item $ \sqrt{x^2 + a^2} を含む積分 [15]$
+		\begin{itemize}
+			\item $  x = a(e^t - e^{-t})/2 または a(t - t^{-1})/2 と置換,有理化$
+			\item $ \int f(x)dx = xf(x) - \int xf’(x)dx による方法$
+		\end{itemize}
+	\end{itemize}
+	\item $ \int \frac{(多項式)}{(多項式)}dx$
+	\begin{itemize}
+		\item $ 分母が因数分解可能⇒部分分数分解$
+		\item $  分子は分母より1だけ次数が低くなるよう設定$
+		\item $ Cf. ヘヴィサイドの展開定理$
+		\item $ 多項式の恒等式の係数決定$
+		\item $ 両辺を展開し係数比較$
+		\item $ 次数より1つ多い個数の数値代入$
+		\item $ 分母が因数分解できない⇒平方完成$
+		\item $ \frac{1}{(x + p)^2 + a^2} で x + p = a \tan \theta とおく$
+	\end{itemize}
+	\item $ 奇関数と偶関数の積分$
+	\begin{itemize}
+		\item $ \int^a_{-a} x^{奇数}dx = 0, \int^a_{-a} x^{偶数}dx = 2\int^a_0 x^{偶数}dx$
+		\item $ より一般に, \int^a_{-a} (奇関数)dx = 0, \int^a_{-a} (偶関数)dx = 2\int^a_{0} (偶関数)dx$
+	\end{itemize}
+	\item $ 定積分$
+	\begin{itemize}
+		\item $ 纏めてから計算が基本$
+		\begin{itemize}
+			\item $ 対称性や周期性$
+			\item $ 定積分の増減などは動かす定数を超関数表示するとラク$
+		\end{itemize}
+		\item $ 定積分の等式は被積分関数と置換積分の周期性を利用して示す$
+		\item $ 被積分関数が微分周期性を持つ⇒部分積分$
+		\begin{itemize}
+			\item $ \int (多項式) \times (指数関数)$
+			\item $ 積の微分を利用して微分すると被積分関数が出てくる関数をつくる(13)$
+		\end{itemize}
+		\item $ (周期関数) \times (指数関数) の定積分は原点付近に写して計算$
+		\begin{itemize}
+			\item $ 部分積分を2回繰り返すか,積の微分を用いて被積分関数が出てくる関数を作る$
+			\item $ 積分区間を分割(S_{n+1} - S_n)し,平行移動して無限和を求める問題 [13]$
+		\end{itemize}
+		\item $ \int^b_a \sqrt{a^2 - x^2}dx は置換より円の部分面積と捉える方が早い$
+		\item $ 定積分の漸化式はほぼ部分積分$
+		\begin{itemize}
+			\item $ I_n = \int^{\frac{\pi}{4}}_0 \tan^n x dx などは例外$
+			\item $ 定積分の不等式評価$
+			\begin{itemize}
+				\item $ 被積分関数(f(x))の評価 (定積分は不等号を保つから [25])$
+				\begin{enumerate}
+					\item $ f(x)の積分区間内での\max, \min$
+					\item $ f(x)の接線や弦$
+					\item $ f(x) = g(x)h(x) or \frac{g(x)}{h(x)} の時は g(x), h(x) の一方だけを \max , \min で評価$
+					\begin{enumerate}
+						\item $ だいたい分母, 0や無限大になる量, 周期関数は評価しない$
+					\end{enumerate}
+					\item $ 積分区間を分割して評価$
+					\item $ その他(誘導付)$
+				\end{enumerate}
+				\item $ 漸化式を用いて評価の精度を上げていく$
+				\begin{enumerate}
+					\item $ 上下どちらかからもう一方が出る$
+				\end{enumerate}
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+	\item $ 曲線の長さ$
+	\item $ 面積$
+	\begin{itemize}
+		\item $ 面積の定義$
+		\item $ 不等式評価$
+		\item $ \int^b_a ydx と見るか \int^d_c xdy と見るか（逆関数で求積）$
+		\begin{itemize}
+			\item $ \int^b_a ydx + \int^d_c xdy = bd - ac$
+			\item $ 媒介変数置換で定積分を統合$
+			\begin{itemize}
+				\item $ x,yの極値に依らない [16]$
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+	\item $ 体積$
+	\begin{itemize}
+		\item $ 体積の定義$
+		\begin{itemize}
+			\item $ 切り口を積分$
+			\item $ 基本的には切り口さえ分かればよい$
+		\end{itemize}
+		\item $ 回転体$
+		\begin{itemize}
+			\item $ 「回転させる前に切る」$
+			\item $ 基本はV = \int^b_a \pi |f(x)^2 - g(x)^2|dx$
+			\item $ 回転部が回転軸を跨ぐときは図形を軸で折り返して議論$
+			\item $ バウムクーヘン積分: $
+			\begin{itemize}
+				\item $ https://mathtrain.jp/baumu$
+				\item $ 例えばx軸回転のとき,y = f(x)として$
+				\begin{enumerate}
+					\item $ W = \int^b_a 2\pi xf(x)dx$
+				\end{enumerate}
+			\end{itemize}
+			\item $ Cf. パップスギュルダンの定理: $
+			\begin{itemize}
+				\item $ https://mathtrain.jp/gyurudone$
+			\end{itemize}
+		\end{itemize}
+		\item $ 交わりの体積$
+		\begin{itemize}
+			\item $ 立体CとPの共通部分Kの体積に関して平面aでの切り口$
+			\item $ K \cap a = (C \cap a) \cap (P \cap a)$
+			\begin{itemize}
+				\item $ C \cap a, P \cap a は容易$
+			\end{itemize}
+			\item $ 交わらす前に切る$
+		\end{itemize}
+		\item $ できるだけ切り口が線形になるように積分軸をとる$
+	\end{itemize}
+\end{itemize}
+
+\section{初等幾何}
+\begin{itemize}
+	\item $ 大円,小円$
+	\item $ 優弧,劣弧$
+	\item $ z_3,z_4がz_1,z_2を通る直線に関して反対側にあるとき,z_1,z_2はz_3,z_4を分離すると言う$
+	\item $ トレミーの定理$
+\end{itemize}
+
+\section{代数幾何}
+\begin{itemize}
+	\item $ 中線定理: a^2+b^2 = 2(x^2+y^2)$
+	\item $ 鋭角三角形$
+	\begin{itemize}
+		\item $ 全ての辺ベクトル同士の内積が正$
+	\end{itemize}
+	\item $ 準円$
+	\begin{itemize}
+		\item $ https://mathtrain.jp/junen$
+	\end{itemize}
+	\item $ 極線$
+	\item $ 反転幾何$
+	\item $ 平行移動もバカにできない$
+	\item $ 平面上の角度$
+	\begin{itemize}
+		\item $ \tan の振る舞い$
+		\item $ ベクトルの内積$
+		\item $ 複素数のパラメータ:偏角$
+	\end{itemize}
+	\item $ ax+by+c=0$
+	\begin{itemize}
+		\item $ に平行な方向ベクトルは(b,-a)など$
+		\item $ の法線ベクトルは(a,b)$
+	\end{itemize}
+\end{itemize}
+\subsection{（面積）}
+\begin{itemize}
+	\item $ 1/2ab \sin C$
+	\begin{itemize}
+		\item $ \frac{1}{2} \sqrt{a^2b^2 - (\bm{a} \cdot \bm{b})^2} （内積の利用）$
+		\item $ \sqrt{s(s-a)(s-b)(s-c)} （ヘロンの公式,余弦定理の利用）$
+	\end{itemize}
+\end{itemize}
+\subsection{（接線）}
+\begin{itemize}
+	\item $ 「図形A,Bが接する」$
+	\item $ \Leftrightarrow「共有点が存在かつ共有点での接線が共通」⇔「f(x) = g(x) かつ f’(x) = g’(x)」$
+	\item $ \Leftrightarrow「方程式AかつBが重解をもつ」$
+	\item $ 手法$
+	\begin{itemize}
+		\item $ 接点の設定$
+		\begin{itemize}
+			\item $ 楕円ならまず三角関数の利用$
+			\begin{itemize}
+				\item $ (a\cos t, b\sin t)（パラメータ表示）$
+			\end{itemize}
+			\item $ 双曲線なら式が簡単になるように$
+			\begin{itemize}
+				\item $ 双曲線上の任意点を(ap, bq)とおく$
+				\begin{enumerate}
+					\item $ 式はp^2 - q^2 = 1$
+				\end{enumerate}
+				\item $ 三角関数は便利そうなら使う$
+			\end{itemize}
+		\end{itemize}
+		\item $ 接線の設定 (y軸と平行かどうか)$
+		\begin{itemize}
+			\item $ とりわけ,傾きをmとおく$
+			\begin{itemize}
+				\item $ 「2接線が直交」（準円）$
+				\item $ m_1m_2 = -1（解と係数の関係）$
+			\end{itemize}
+			\item $ \tan と関連して…$
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\subsection{（二次曲線）（円錐曲線）}
+\begin{itemize}
+	\item $ 離心率$
+	\begin{itemize}
+		\item $ 動点Pから準線gに引いた垂線の足Hと焦点Fに関して,\frac{PF}{PH} = e（離心率）とすると$
+		\begin{itemize}
+			\item $ 0 < e < 1ならば楕円$
+			\item $ e = 1 ならば放物線$
+			\item $ e > 1 ならば双曲線  $
+		\end{itemize}
+	\end{itemize}
+	\item $ 円錐曲線$
+	\begin{itemize}
+		\item $ |OA \cdot OT| = |OA||OT| \cos \theta$
+		\begin{itemize}
+			\item $ 片側円錐だけのとき左辺の絶対値は外れる$
+		\end{itemize}
+	\end{itemize}
+	\item $ 放物線$
+	\begin{itemize}
+		\item $ （放物線の準円）$
+	\end{itemize}
+	\item $ 楕円$
+	\begin{itemize}
+		\item $ 楕円の準円$
+		\item $ 円の縮小,拡大$
+		\begin{itemize}
+			\item $ 実数の稠密性$
+			\item $ 「接する条件」は拡縮前後で不変$
+			\begin{itemize}
+				\item $ 真円変換して（距離） = （半径）$
+				\item $ 判別式$
+			\end{itemize}
+		\end{itemize}
+		\item $ 焦点から楕円上の点の距離はキレイな式になる$
+		\item $ ax + by = 1を(a,b)を極とする円x^2+y^2=1の極線という$
+		\begin{itemize}
+			\item $ 円周上なら接線と一致$
+			\item $ 外部の点なら2接線の接点を通る直線$
+		\end{itemize}
+	\end{itemize}
+	\item $ 双曲線$
+	\item $ （双曲線の準円）$
+	\item $ 漸近線と接線$
+	\begin{itemize}
+		\item $ が成す三角形の面積が一定$
+		\item $ 接点は2交点の中点$
+	\end{itemize}
+	\item $ 曲線の長さ$
+	\begin{itemize}
+		\item $ \int \sqrt{dx^2 + dy^2}$
+		\item $ 双曲線関数$
+	\end{itemize}
+\end{itemize}
+
+\section{幾何}
+\begin{itemize}
+	\item $ 図形の計量$
+	\begin{itemize}
+		\item $ 辺（センス不要）$
+		\item $ 角度（回転など）$
+		\begin{itemize}
+			\item $ A+B+C= \pi などはAとBCの関係のように見る$
+		\end{itemize}
+		\item $ パラメータ設定は可能な限り角度優先$
+	\end{itemize}
+\end{itemize}
+
+\end{document}
