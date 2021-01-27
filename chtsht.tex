@@ -1,6 +1,12 @@
 \documentclass[dvipdfmx,uplatex]{jsarticle}
 \usepackage{./sty/macros}
 
+\begin{comment}
+	\begin{itemize}
+	\end{itemize}
+\end{comment}
+
+
 \begin{document}
 \section{数学的統語論,意味論}
 （全体的な方針）
@@ -13,6 +19,9 @@
 		\item $展開した式$
 		\item $一部をまとめた式$
 		\item $微分した式$
+		\begin{itemize}
+			\item $\sum \frac{x^k}{k}型:f(x)=\sum \frac{x^k}{k}=-\log (1-x) - \int^x_0 \frac{t^n}{1-t}dt$を示せ（東工大プレ数学一日目[2]）
+		\end{itemize}
 		\item $積分した式$
 		\item $具体的に代入した式$
 		\item $特別な値:0,1, \infty を代入した式$
@@ -25,6 +34,9 @@
 	\item $鋭角では三角関数は図形から求めた方が早い$
 	\item $ベクトルと面積公式$
 	\item $図形問題は初等幾何,ベクトル、座標で$
+	\begin{itemize}
+		\item 90°が含まれる図形ではそれをもとに座標を設定できる
+	\end{itemize}
 	\item $初等幾何$
 	\begin{itemize}
 		\item $合同,相似$
@@ -61,7 +73,7 @@
 		\begin{itemize}
 			\item $ a, b を共に割り切る素数が存在しない。$
 			\item $ ax + by = 1 を満たす整数 x, y が存在する。（ベズーの等式を参照）$
-			\item $ b は a を法とする逆数をもつ。即ち by ≡ 1 (mod a) を満たす整数 y が存在$
+			\item $ b は a を法とする逆数をもつ。即ち by \equiv 1 (\mathrm{mod} a) を満たす整数 y が存在$
 				\item $別の言い方をすれば,b は a を法とする剰余類環 Z/aZ の単元となっている。$
 			\item $ a, b の最小公倍数 lcm(a, b) が積 ab に等しい。$
 			\item $ a, b の最大公約数 gcd(a, b) が 1 に等しい。$
@@ -94,7 +106,11 @@
 	\end{itemize}
 	\item $ フェルマーの小定理$
 	\begin{itemize}
-		\item $ a^{a-1} \mod 1 (mod p)$
+		\item $ a^{p-1} \equiv 1 ( \mathrm{mod} p)$
+		\begin{itemize}
+			\item 補題:「$(m+1)^pをpで割った余りはm^p+1をPで割った余りに等しい$」
+			\item 二項定理と帰納法
+		\end{itemize}
 	\end{itemize}
 \end{itemize}
 
@@ -114,11 +130,20 @@
 	\begin{itemize}
 		\item $ 等比数列の和$
 	\end{itemize}
+	\item $x^2+y^2+z^2-xy-yz-zx=\frac{1}{2}\{(x-y)^2+(y-z)^2+(z-x)^2\}$
+	\item $x^3+y^3+z^3-3xyz=(x+y+z)(x^2+y^2+z^2-xy-yz-zx)$
+
+	\begin{itemize}
+		\item 3個の相加相乗の関係になる
+	\end{itemize}
 \end{itemize}
 
 \section{整式・多項式}
 \begin{itemize}
-	\item $ 除法原理,剰余の定理、二項定理、微分（積分）して比較$
+	\item $ 除法原理,剰余の定理、二項定理、微分（積分）して比較<-忘れがち$
+	\begin{itemize}
+		\item 微分係数と積分定数が等しいと2式は等しい
+	\end{itemize}
 	\item $ 整式a_nx^n+...+a_1x+a_0=0(a_n≠0)が有理解を持つとき解の候補は±(a_0の約数)/(a_nの約数)$
 	\begin{itemize}
 		\item $ とりわけa_n=1の下で整式が有理数解を持つならば整数解を持つ$
@@ -140,6 +165,14 @@
 			\item $ (‘20東工大実践)$
 		\end{itemize}
 	\end{itemize}
+	\item $ペル方程式;整数 x と y に関する不定方程式：x^2−dy^2=1 をペル方程式と言う$
+	\begin{itemize}
+		\item $二次の不定方程式 ax^2+bxy+cy^2+dx+ey+f=0 の多くがペル型方程式に帰着できる$
+		\begin{itemize}
+			\item $3x^2-5y^2=4: 両辺 3 倍して 3x=X,y=Y とおくと，X^2−15Y^2=12 となりペル型方程式に帰着される。(x,y) が整数なら (X,Y) も整数なので上記のペル型方程式の整数解(X,Y) が求まればもとの整数解も全て求まる。$
+			\item $x^2+2xy-y^2-3=0: 平方完成するとペル型方程式に帰着される：(x+y)^2−2y^2=3;ここで，x+y=X,y=Y とおくと，X^2−2Y^2=3 となる。(x,y) が整数なら (X,Y) も整数なので上記のペル型方程式の整数解(X,Y) が求まればもとの整数解も全て求まる。$
+		\end{itemize}
+	\end{itemize}
 \end{itemize}
 
 \section{ベクトル}
@@ -147,20 +180,41 @@
 	\item $ ベクトルで処理か図形的処理か$
 	\item $ 図形$
 	\begin{itemize}
-		\item $ 大きさが一定;円$
+		\item $ |\bm{AP}| = Const ;円$
 		\item $ AP・BP = 0 ;AB直径$
 		\item $ n・AP = 0 ;Pはnに垂直でAを通る直線上$
+		\item ベクトルの因数分解、平方完成で持ち込む
+		\item $△ABCの内心IはOI=\frac{aOA+bOB+cOC}{a+b+c}で与えられる（大文字はベクトル）$
+		\begin{itemize}
+			\item 単位ベクトルの利用
+			\item 角の2等分
+			\item 傍心も同様の形式
+		\end{itemize}
 	\end{itemize}
 	\item $ ベクトルの平方完成$
-	\item $ 分点公式でベクトルを纏める$
+	\item $ 位置ベクトルと辺の比:分点公式でベクトルを纏める,ベクトルに意味を持たせる$
+	\begin{itemize}
+		\item $mPA+nPB=(m+n)\frac{mPA+nPB}{m+n}$
+	\end{itemize}
 	\item $ ベクトル三角形の面積$
 	\begin{itemize}
 		\item $ \frac{1}{2}|a||b| \sin A$
-		\item $ \frac{1}{2}(|a|^2|b|^2 - (a \cdot b)^2)^{½}$
+		\item $ \frac{1}{2} \sqrt{|a|^2|b|^2 - (a \cdot b)^2}$
 	\end{itemize}
 	\item $ 内積の利用$
 	\begin{itemize}
 		\item $ 不等式$
+		\item $ax+by=(a,b) \cdot (x,y)$
+		\item 図形量の一つ
+		\item $e.g. x^2+y^2=1の下で3x+4yの\max,\min$
+		\begin{itemize}
+			\item $(3,4)\cdot(x,y)$
+		\end{itemize}
+		\item $e.g. x^2+y^2+z^2=1のときx+y+zの\max,\min;[43]e.g.$
+		\begin{itemize}
+			\item $x+y+z=(x,y,z)\cdot (1,1,1)=\sqrt{3(x^2+y^2+z^2)} \cos \theta$
+		\end{itemize}
+
 	\end{itemize}
 \end{itemize}
 
@@ -180,7 +234,7 @@
 				\item $ \arg zw \equiv \arg z + \arg w$
 				\item $ \arg \frac{z}{w} \equiv \arg z − \arg w$
 				\begin{itemize}
-					\item $ (何れも mod 2π)$
+					\item $ (何れも \mathrm{mod} 2 \pi)$
 				\end{itemize}
 			\end{itemize}
 		\item $ |z| \cos \arg z = \mathrm{Re} z$
@@ -195,7 +249,7 @@
 		\item $ ベクトルと複素数を同一視して...$
 	\end{itemize}
 	\item $ |a| = 1 \Leftrightarrow \bar{a} = a^{-1} $
-	\item $ |1 - a| = \sqrt{(1 - \cos^2 x)^2 + \sin^2 x)} = 2 \sin \frac{x}{2}$
+	\item $ |1 - a| = \sqrt{(1 - \cos^2 x)^2 + \sin^2 x} = 2 \sin \frac{x}{2}$
 	\item $ (z2-z1)/(z2-z1) =$
 	\item $ 正三角形\Leftrightarrow(z2-z1)2+(z3-z2)2+(z1-z3)2=0$
 	\begin{itemize}
@@ -213,6 +267,7 @@
 	\begin{itemize}
 		\item $ |z-a| = k |z-b| は二点A(a),B(b)が成す線分をk:1に内分する点C,k:1に外分する点Dを直径の端点とする円を描く$
 		\item $  |z-a| = k |z-b| , |z-a| : |z-b| = k : 1$
+		\item ベクトルでも
 	\end{itemize}
 	\item $ 図形条件$
 	\begin{itemize}
@@ -238,22 +293,33 @@
 	\item $ ジューコフスキー変換$
 	\begin{itemize}
 		\item $ w = \frac{1}{2} \left( z + \frac{1}{z} \right)$
+		\item 原点を通る直線は双曲線，原点を中心とする円は楕円にうつる．
+		\item 中心を原点からずらした円の軌跡はジューコフスキーの翼と呼ばれています．
 	\end{itemize}
 \end{itemize}
 
 \section{三角関数}
 \begin{itemize}
+	\item $ \cos^{2} で括って \tan の式に変える$
 	\item $ チェビシェフ多項式: \cos nθ は \cos θ の n 次多項式で表せる$
+	\begin{itemize}
+		\item $\cos n\theta = 2\cos \theta \cos (n-1)\theta - \cos (n-2)\theta$
+	\end{itemize}
 	\item $ 倍角公式で次数下げ$
+	\begin{itemize}
+		\item 和積や合成などが使えるようになる
+	\end{itemize}
 	\item $ 基本不等式$
 	\begin{itemize}
 		\item $ 0 < x < π/2 ⇒ \sin x < x < \tan x$
 	\end{itemize}
-	\item $ 角度を加減すると変数の場所が減る場合$
+	\item $ 角度を加減すると変数の場所が減る場合(e.g.三角形の内角,補角など)$
 	\begin{itemize}
 		\item $ 和積の利用$
 		\begin{itemize}
-			\item $ E.g. (XSk115)$
+			\item $ e.g. (XSk115)$
+			\item 特に$( \alpha + \beta )と( \alpha - \beta )$など[18]
+			\item $三角形の内角で \cos \alpha + \cos \beta + \cos \gamma の \max は3/2$
 		\end{itemize}
 	\end{itemize}
 \end{itemize}
@@ -272,22 +338,76 @@
 		\item $ x^2=x-1 より\left(\frac{1\pm\sqrt{3}}{2}\right) = (\cos \pi/3 + \sin \pi/3)^2 が含まれる$
 		\item $ 3の剰余類で分類し立式$
 	\end{itemize}
+	\item $分数漸化式:a_{n+1}=\frac{pa_n}{qa_n+r}$
+	\begin{itemize}
+		\item 逆数をとる
+	\end{itemize}
+	\item $a_{n+1}=2a_n+3n,a_1=-4の一般項？$
+	\begin{itemize}
+		\item $a_{n+1}+p(n+1)+q=2(a_n+pn+q) と等比型に帰着できると仮定$
+	\end{itemize}
+	\item $a_{n+1}=3a_n^2,a_1=3の一般項？$
+	\begin{itemize}
+		\item $両辺\log_3を取る$
+	\end{itemize}
+	\item $a_{n+1}=(n+1)a_n$
+	\begin{itemize}
+		\item 両辺(n+1)!で割る
+	\end{itemize}
+	\item $(n+2)a_{n+1}=na_n$
+	\begin{itemize}
+		\item 両辺に(n+1)を掛ける
+	\end{itemize}
+	\item $a_{n+1}=(n+1)a_n-n$
+	\begin{itemize}
+		\item (n+1)!で割り
+		\item $-\frac{k}{(k+1)!}=\frac{1-(k+1)}{(k+1)!}=\frac{1}{(k+1)!}-\frac{1}{(k)!}$
+	\end{itemize}
+	\item 繰り返しの作業
+	\begin{itemize}
+		\item 証明なら帰納法
+		\item 求値なら漸化式
+	\end{itemize}
+	\item $\sum k \cdot k! = \sum (k+1)k! - k!$
 \end{itemize}
 
 \section{存在条件}
 \begin{itemize}
 	\item $ 列挙$
-	\item $ 方程式の立式 \Rightarrow 解の存在$
+	\item $ 方程式の立式 \Rightarrow 解の存在（解の配置）または媒介変数の存在条件若しくは範囲$
 	\begin{itemize}
 		\item $ 実数解の存在における中間値の定理の利用$
 		\item $ 唯一の解: 導関数の単調性$
+		\item 直接求める
+		\begin{itemize}
+			\item $a\in R_+のときx^2-3x-a^2-a+2=0の解の範囲[44]e.g.$
+		\end{itemize}
+		\item 定数分離、直線分離
+		\begin{itemize}
+			\item 東工大プレ数学演習[1](2)
+		\end{itemize}
+		\item 解と係数の関係
+		\begin{itemize}
+			\item $aが正の数全体を動くときx^2-ax+\frac{a^2}{2}-1=0の実数解がとる値の範囲[44]e.g.$
+		\end{itemize}
+		\item 判別式
+		\item 媒介変数の存在条件
+		\begin{itemize}
+			\item $x,y\in Rかつx^2+xy+y^2=1のときxの範囲[44]e.g.$
+			\item $y=\frac{2x+1}{x^2+1}の範囲[44]e.g.$
+			\item $(t^2+1,t^4)の軌跡[44]e.g.$
+		\end{itemize}
 	\end{itemize}
 	\item $ 部屋割り論法$
+	\begin{itemize}
+		\item n個の区間にn+1以上の要素を入れると少なくとも一つは重複
+	\end{itemize}
 	\item $ 順像法,逆像法もこの類$
 	\begin{itemize}
 		\item $ 特に大体の逆像法は2次,3次方程式の解の個数、解の配置問題に帰着できる$
-		\item $ (パラメータ) = f(x,y) の形で同値性の議論をする$
+		\item $ (パラメータ) = f(x,y) の形で同値性（存在条件）の議論をする$
 	\end{itemize}
+	\item 相手の存在条件で自分の範囲がわかる
 \end{itemize}
 
 \section{全称}
@@ -306,6 +426,9 @@
 		\item $ 凸不等式（イェンゼンの不等式）$
 		\begin{itemize}
 			\item $ 接線評価$
+			\begin{itemize}
+				\item $e^x \geq x+1$や$x-1 \geq \log x$など
+			\end{itemize}
 			\item $ Cf. 凸解析$
 			\begin{itemize}
 				\item $ ルジャンドル変換$
@@ -341,15 +464,22 @@
 	\item $ 不等式$
 	\begin{itemize}
 		\item $ 相加相乗平均$
+		\begin{itemize}
+			\item $x^2+y^2+z^2=1のときxyzの \max , \min :[43]e.g.$
+		\end{itemize}
 		\item $ コーシー・シュワルツの不等式$
 		\item $ 平均値の定理$
 		\item $ 面積評価$
 		\begin{itemize}
 			\item $ 見立て$
+			\item $e.g.:0<a<bのとき\frac{2(b-a)}{a+b}< \log b - \log a < \frac{(b-a)(a+b)}{2ab}を示せ:[7]$
 		\end{itemize}
 		\item $ 凸不等式（イェンゼンの不等式）$
 		\begin{itemize}
 			\item $ 接線評価$
+			\begin{itemize}
+				\item $e^x \geq x+1$や$x-1 \geq \log x$など
+			\end{itemize}
 		\end{itemize}
 		\item $ (左辺) - (右辺) の増減$
 		\item $ F(a,b) と F(b,a)の評価$
@@ -361,9 +491,19 @@
 				\item $ 斉次化$
 			\end{itemize}
 		\end{itemize}
+		\item $A^2 \leq BCに判別式が使える場合[42]follow-up$
+		\item 内積の利用
+		\begin{itemize}
+			\item $e.g. x^2+y^2+z^2=1のときx+y+zの \max , \min :[43]e.g$
+			\item e.g.[43]
+		\end{itemize}
+		\item 解と係数の関係
+		\begin{itemize}
+			\item $e.g.x+y+z=9/2,xy+yz+zx=6のときxyzの範囲[43]e.g.$
+		\end{itemize}
 		\item $ Cf. 対称斉次な不等式$
 		\begin{itemize}
-			\item $ ]Muirheadの不等式$
+			\item $ Muirheadの不等式$
 			\item $ Schurの不等式$
 			\item $ チェビシェフの不等式$
 		\end{itemize}
@@ -379,12 +519,12 @@
 \begin{itemize}
 	\item $ 割り算で簡素化$
 	\begin{itemize}
-		\item $ D(分母) <= D(分子) なら帯分数化$
+		\item $ 次元(分母) \leq 次元(分子) なら帯分数化$
 	\end{itemize}
-	\item $ 平方完成$
+	\item $ 平方完成 <-忘れがち$
 	\item $ 相加平均相乗平均の関係$
 	\item $ 同次式の斉次化$
-	\item $ 2変数関数のmax,min: F(x,y)$
+	\item $ 2変数関数の \max , \min : F(x,y)$
 	\begin{itemize}
 		\item $ 領域の図示と共有点（逆像的）$
 		\begin{itemize}
@@ -394,11 +534,11 @@
 		\end{itemize}
 		\item $ 予選決勝法（順像的）$
 		\begin{itemize}
-			\item $ 一文字固定したmax,minを動かす$
+			\item $ 一文字固定した \max , \min を動かす$
 			\begin{itemize}
 				\item $ (XSk316) x,y \in [-1,1]で 1-ax-by-axy の \min が正となる(a,b)の領域$
 				\item $ X,yの対象式でも一文字固定がよいときもある$
-				\item $ m = \min\{A, B, C, D\}$
+				\item $ m = \min \{A, B, C, D\}$
 				\item $ 線形の最大最小は区間の端である$
 			\end{itemize}
 			\item $ Cf. 偏微分$
@@ -469,6 +609,9 @@
 		\begin{itemize}
 			\item $ 評価$
 			\item $ 三角関数の振る舞いから引数の振る舞いを調べる$
+			\begin{itemize}
+				\item $x \in (0,\pi /2)のとき(x+2n \pi ) \sin x - \cos x=0の解のn \rightarrow 0での極限;[5]e.g.$
+			\end{itemize}
 		\end{itemize}
 		\item $ 定数分離$
 		\item $ 式中の発散量,収束量などに着目$
@@ -513,7 +656,12 @@
 \section{積分}
 \subsection{（公式）}
 \begin{itemize}
-	\item $ \int^b_a (x - a)(x - b)dx = - \frac (b - a)^3$
+	\item $ \int^b_a (x - a)(x - b)dx = - \frac{1}{6} (b - a)^3$
+	\item $\int^b_a (x - a)^2dx = - \frac{1}{3} (b - a)^3$
+	\item $\int^b_a (x - a)^2(x - b)dx = - \frac{1}{12} (b - a)^3$
+	\begin{itemize}
+		\item 3分の1公式の適用
+	\end{itemize}
 \end{itemize}
 \subsection{（方針）}
 \begin{itemize}
@@ -531,7 +679,7 @@
 		\begin{itemize}
 			\item $ より一般に, \int^a_0 f(x)dx = \int^a_0 f(a-x)dx$
 		\end{itemize}
-		\item $ \tan などに置換$
+		\item $ 平方完成して \sin , \cos , \tan などに置換$
 		\begin{itemize}
 			\item $ E.g. \frac{1}{x^2+2x+2} = \frac{1}{\tan^2 \theta + 1}$
 		\end{itemize}
@@ -544,6 +692,7 @@
 		\begin{itemize}
 			\item $  x = a(e^t - e^{-t})/2 または a(t - t^{-1})/2 と置換,有理化$
 			\item $ \int f(x)dx = xf(x) - \int xf’(x)dx による方法$
+			\item 東工大プレ数学演習[3]$\int (\sqrt{b-b^2})^3db$:平方完成して三角関数に置換
 		\end{itemize}
 	\end{itemize}
 	\item $ \int \frac{(多項式)}{(多項式)}dx$
@@ -632,7 +781,7 @@
 			\item $ 回転部が回転軸を跨ぐときは図形を軸で折り返して議論$
 			\item $ バウムクーヘン積分: $
 			\begin{itemize}
-				\item $ https://mathtrain.jp/baumu$
+				\item \url{https://mathtrain.jp/baumu}
 				\item $ 例えばx軸回転のとき,y = f(x)として$
 				\begin{enumerate}
 					\item $ W = \int^b_a 2\pi xf(x)dx$
@@ -640,7 +789,7 @@
 			\end{itemize}
 			\item $ Cf. パップスギュルダンの定理: $
 			\begin{itemize}
-				\item $ https://mathtrain.jp/gyurudone$
+				\item \url{https://mathtrain.jp/gyurudone}
 			\end{itemize}
 		\end{itemize}
 		\item $ 交わりの体積$
@@ -662,6 +811,19 @@
 	\item $ 優弧,劣弧$
 	\item $ z_3,z_4がz_1,z_2を通る直線に関して反対側にあるとき,z_1,z_2はz_3,z_4を分離すると言う$
 	\item $ トレミーの定理$
+	\item 平行四辺形の成立条件
+	\begin{itemize}
+		\item 向かい合う二組の辺が平行
+		\item 向かい合う二組の辺が等しい
+		\item 向かい合う一組の辺が平行で等しい
+		\item 向かい合う2角が等しい
+		\item 対角線が各々の中点で交わる
+	\end{itemize}
+	\item 角の大小と辺の大小は一致
+	\item 中線定理:三角形ABCでMがBCの中点のとき$AB^2+BC^2=2(AM^2+BM^2)$
+	\begin{itemize}
+		\item 余弦定理やベクトル
+	\end{itemize}
 \end{itemize}
 
 \section{代数幾何}
