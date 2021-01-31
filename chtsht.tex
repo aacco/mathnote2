@@ -311,7 +311,7 @@
 	\end{itemize}
 	\item $ 基本不等式$
 	\begin{itemize}
-		\item $ 0 < x < π/2 ⇒ \sin x < x < \tan x$
+		\item $ 0 < x < \frac{ \pi }{2} \Rightarrow \sin x < x < \tan x$
 	\end{itemize}
 	\item $ 角度を加減すると変数の場所が減る場合(e.g.三角形の内角,補角など)$
 	\begin{itemize}
@@ -468,17 +468,24 @@
 			\item $x^2+y^2+z^2=1のときxyzの \max , \min :[43]e.g.$
 		\end{itemize}
 		\item $ コーシー・シュワルツの不等式$
+		\begin{itemize}
+			\item ${\displaystyle(\sum_{i=1}^n a_i^2)}{\displaystyle(\sum_{i=1}^n b_i^2)}\geq{\displaystyle(\sum_{i=1}^n a_ib_i)^2}$
+			\item $特に n=2 の場合:(a_1^2+a_2^2)(b_1^2+b_2^2)\geq(a_1b_1+a_2b_2)^2$
+			\item $n=3 の場合:(a_1^2+a_2^2+a_3^2)(b_1^2+b_2^2+b_3^2)\geq(a_1b_1+a_2b_2+a_3b_3)^2$
+			\item $\overrightarrow{a}=(a_1,a_2,a_3), \overrightarrow{b}=(b_1,b_2,b_3)のとき|\overrightarrow{a}|^2|\overrightarrow{b}|^2\geq(\overrightarrow{a}\cdot\overrightarrow{b})^2$ということ
+		\end{itemize}
 		\item $ 平均値の定理$
 		\item $ 面積評価$
 		\begin{itemize}
 			\item $ 見立て$
 			\item $e.g.:0<a<bのとき\frac{2(b-a)}{a+b}< \log b - \log a < \frac{(b-a)(a+b)}{2ab}を示せ:[7]$
 		\end{itemize}
-		\item $ 凸不等式（イェンゼンの不等式）$
+		\item $ 基本不等式$
 		\begin{itemize}
-			\item $ 接線評価$
+			\item $ 0 < x < \frac{ \pi }{2} \Rightarrow \sin x < x < \tan x$
+			\item $ 凸不等式（イェンゼンの不等式）$
 			\begin{itemize}
-				\item $e^x \geq x+1$や$x-1 \geq \log x$など
+				\item $ 接線評価:e^x \geq x+1$や$x-1 \geq \log x$など
 			\end{itemize}
 		\end{itemize}
 		\item $ (左辺) - (右辺) の増減$
@@ -658,9 +665,14 @@
 \begin{itemize}
 	\item $ \int^b_a (x - a)(x - b)dx = - \frac{1}{6} (b - a)^3$
 	\item $\int^b_a (x - a)^2dx = - \frac{1}{3} (b - a)^3$
+	\begin{itemize}
+		\item 図形的には放物線と接線,接する2放物線など
+	\end{itemize}
 	\item $\int^b_a (x - a)^2(x - b)dx = - \frac{1}{12} (b - a)^3$
 	\begin{itemize}
 		\item 3分の1公式の適用
+		\item 図形的には放物線と2接線のなす面積
+		\item 2接線の交点のx座標は2接点のx座標の平均
 	\end{itemize}
 \end{itemize}
 \subsection{（方針）}
@@ -668,9 +680,17 @@
 	\item $ 図形と見て計算$
 	\item $ \sqrt{} 内をまるごと置換$
 	\item $ \int g(f(x))f'(x)dx 型$
+	\item $ 積の微分$
+	\begin{itemize}
+		\item $\int (t \sin 2t + t^2 \cos 2t)dt = \frac{1}{2} t^2 \sin 2t +C :III[16]$
+		\item $\int e^{-x} \sin (x + \frac{ \pi }{4})dx :III[16]eg$
+	\end{itemize}
 	\item $ \log$
 	\begin{itemize}
 		\item $ \log は大抵部分積分$
+		\begin{itemize}
+			\item $\int^a_0 \log (a^2+x^2) dx:[11]$
+		\end{itemize}
 		\item $ \int \frac{f’(x)}{f(x)}dx = \log |f(x)| + C$
 	\end{itemize}
 	\item $ 三角関数$
@@ -690,7 +710,7 @@
 		\end{itemize}
 		\item $ \sqrt{x^2 + a^2} を含む積分 [15]$
 		\begin{itemize}
-			\item $  x = a(e^t - e^{-t})/2 または a(t - t^{-1})/2 と置換,有理化$
+			\item $  x = \frac{a}{2}(e^t - e^{-t}) または \frac{a}{2}(t - t^{-1}) と置換,有理化$
 			\item $ \int f(x)dx = xf(x) - \int xf’(x)dx による方法$
 			\item 東工大プレ数学演習[3]$\int (\sqrt{b-b^2})^3db$:平方完成して三角関数に置換
 		\end{itemize}
@@ -718,11 +738,15 @@
 			\item $ 対称性や周期性$
 			\item $ 定積分の増減などは動かす定数を超関数表示するとラク$
 		\end{itemize}
+		\item $立式時に極値などで積分が二つに分かれていても媒介変数の積分では一本化できる[16]$
+		\begin{itemize}
+			\item 極値をとる媒介変数の値が求まらなくても最初と最後がわかれば計算できる
+		\end{itemize}
 		\item $ 定積分の等式は被積分関数と置換積分の周期性を利用して示す$
 		\item $ 被積分関数が微分周期性を持つ⇒部分積分$
 		\begin{itemize}
 			\item $ \int (多項式) \times (指数関数)$
-			\item $ 積の微分を利用して微分すると被積分関数が出てくる関数をつくる(13)$
+			\item $ 積の微分を利用して微分すると被積分関数が出てくる関数をつくる[13]$
 		\end{itemize}
 		\item $ (周期関数) \times (指数関数) の定積分は原点付近に写して計算$
 		\begin{itemize}
@@ -766,6 +790,7 @@
 				\item $ x,yの極値に依らない [16]$
 			\end{itemize}
 		\end{itemize}
+		\item 面積は交点の座標の関数(特に超関数のとき)として表すのが基本$:III[14]$
 	\end{itemize}
 	\item $ 体積$
 	\begin{itemize}
@@ -779,14 +804,17 @@
 			\item $ 「回転させる前に切る」$
 			\item $ 基本はV = \int^b_a \pi |f(x)^2 - g(x)^2|dx$
 			\item $ 回転部が回転軸を跨ぐときは図形を軸で折り返して議論$
-			\item $ バウムクーヘン積分: $
-			\begin{itemize}
-				\item \url{https://mathtrain.jp/baumu}
-				\item $ 例えばx軸回転のとき,y = f(x)として$
+			\item $ バウムクーヘン積分:[18] $
+			\begin{enumerate}
+				\item $ 逆関数:x=g(y)を用いて:V= \int^d_c \pi x^2 dy = \int^d_c \pi g(y)^2 dy$
+				\item $ 上の積分をy=f(x)で置換して:V= \int^b_a \pi x^2 \frac{dy}{dx} dx = \int^b_a \pi x^2 f'(x)dx$
+				\item $ 例えばy軸回転のとき,y = f(x)として:W = \int^b_a 2\pi xf(x)dx$
 				\begin{enumerate}
-					\item $ W = \int^b_a 2\pi xf(x)dx$
+					\item $ 2.より:V = [\pi x^2 f(x)]^b_a - \int^b_a 2 \pi xf(x)dx = \pi b^2 f(b) - \pi a^2 f(a) - \int^b_a 2 \pi xf(x)dx$
+					\item 図形的意味より上が示せる
 				\end{enumerate}
-			\end{itemize}
+				\item \url{https://mathtrain.jp/baumu}
+			\end{enumerate}
 			\item $ Cf. パップスギュルダンの定理: $
 			\begin{itemize}
 				\item \url{https://mathtrain.jp/gyurudone}
