@@ -753,7 +753,12 @@
 			\item $ 部分積分を2回繰り返すか,積の微分を用いて被積分関数が出てくる関数を作る$
 			\item $ 積分区間を分割(S_{n+1} - S_n)し,平行移動して無限和を求める問題 [13]$
 		\end{itemize}
-		\item $ \int^b_a \sqrt{a^2 - x^2}dx は置換より円の部分面積と捉える方が早い$
+		\item $ \int^b_a \sqrt{a^2 - x^2}dx は置換より円の部分面積と捉える方が早い:[22]$
+		\begin{itemize}
+			\item $\int^1_0 x^3 \sqrt{1-x^2} dx$
+			\item $\int^1_0 \sqrt{1-x^2}dx$
+			\item $\int^2_0 \sqrt{x(2-x)}dx$
+		\end{itemize}
 		\item $ 定積分の漸化式はほぼ部分積分$
 		\begin{itemize}
 			\item $ I_n = \int^{\frac{\pi}{4}}_0 \tan^n x dx などは例外$
@@ -801,9 +806,15 @@
 		\end{itemize}
 		\item $ 回転体$
 		\begin{itemize}
+			\item $ 回転体でない場合:対称面で切ることが多い:[22]$
 			\item $ 「回転させる前に切る」$
 			\item $ 基本はV = \int^b_a \pi |f(x)^2 - g(x)^2|dx$
 			\item $ 回転部が回転軸を跨ぐときは図形を軸で折り返して議論$
+			\item $ 放物線の回転体の縦切りも放物線:[22]$
+			\begin{enumerate}
+				\item $ y=x^2のy=kによる切り口は中心(0,k,0)半径 \sqrt{k}の円であるからkを消去してx^2+z^2=y,y=k$
+				\item $ ゆえにz=tでの切り口はx^2+t^2=y,z=t(放物線)であることが分かる$
+			\end{enumerate}
 			\item $ バウムクーヘン積分:[18] $
 			\begin{enumerate}
 				\item $ 逆関数:x=g(y)を用いて:V= \int^d_c \pi x^2 dy = \int^d_c \pi g(y)^2 dy$
@@ -830,6 +841,9 @@
 			\item $ 交わらす前に切る$
 		\end{itemize}
 		\item $ できるだけ切り口が線形になるように積分軸をとる$
+		\begin{itemize}
+			\item $中心軸が直交する半径rの十分長い直円柱の交わりの体積:[21]e.g.$
+		\end{itemize}
 	\end{itemize}
 \end{itemize}
 
