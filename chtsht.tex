@@ -469,7 +469,7 @@
 		\end{itemize}
 		\item $ コーシー・シュワルツの不等式$
 		\begin{itemize}
-			\item ${\displaystyle(\sum_{i=1}^n a_i^2)}{\displaystyle(\sum_{i=1}^n b_i^2)}\geq{\displaystyle(\sum_{i=1}^n a_ib_i)^2}$
+			\item ${\displaystyle \left( \sum_{i=1}^n a_i^2 \right)}{\displaystyle \left( \sum_{i=1}^n b_i^2 \right)}\geq{\displaystyle \left( \sum_{i=1}^n a_ib_i \right)^2}$
 			\item $特に n=2 の場合:(a_1^2+a_2^2)(b_1^2+b_2^2)\geq(a_1b_1+a_2b_2)^2$
 			\item $n=3 の場合:(a_1^2+a_2^2+a_3^2)(b_1^2+b_2^2+b_3^2)\geq(a_1b_1+a_2b_2+a_3b_3)^2$
 			\item $\overrightarrow{a}=(a_1,a_2,a_3), \overrightarrow{b}=(b_1,b_2,b_3)のとき|\overrightarrow{a}|^2|\overrightarrow{b}|^2\geq(\overrightarrow{a}\cdot\overrightarrow{b})^2$ということ
@@ -487,6 +487,8 @@
 			\begin{itemize}
 				\item $ 接線評価:e^x \geq x+1$や$x-1 \geq \log x$など
 			\end{itemize}
+			\item $ 被積分関数から定積分の評価:III[24]とe.g.$
+			\item 複雑さ、逆算
 		\end{itemize}
 		\item $ (左辺) - (右辺) の増減$
 		\item $ F(a,b) と F(b,a)の評価$
@@ -778,6 +780,7 @@
 				\item $ 漸化式を用いて評価の精度を上げていく$
 				\begin{enumerate}
 					\item $ 上下どちらかからもう一方が出る$
+					\item $I_n = \int^1_0 x^n e^xdx$
 				\end{enumerate}
 			\end{itemize}
 		\end{itemize}
@@ -877,7 +880,7 @@
 	\end{itemize}
 	\item $ 準円$
 	\begin{itemize}
-		\item $ https://mathtrain.jp/junen$
+		\item \url{https://mathtrain.jp/junen}
 	\end{itemize}
 	\item $ 極線$
 	\item $ 反転幾何$
@@ -892,6 +895,12 @@
 	\begin{itemize}
 		\item $ に平行な方向ベクトルは(b,-a)など$
 		\item $ の法線ベクトルは(a,b)$
+	\end{itemize}
+	\item $ 距離の和:[29]$
+	\begin{itemize}
+		\item 対称点,対称軸の設定
+		\item 楕円の利用
+		\item 変数を設定
 	\end{itemize}
 \end{itemize}
 \subsection{（面積）}
@@ -946,19 +955,36 @@
 			\item $ e > 1 ならば双曲線  $
 		\end{itemize}
 	\end{itemize}
-	\item $ 円錐曲線$
+	\item $ 円錐曲線[30]$
 	\begin{itemize}
-		\item $ |OA \cdot OT| = |OA||OT| \cos \theta$
+		\item $ |\bm{OA} \cdot \bm{OT}| = |OA||OT| \cos \theta$
+		\item $ |(a,b,c) \cdot (x,y,z)| = \sqrt{a^2+b^2+c^2} \sqrt{x^2+y^2+z^2} \cos \theta$
 		\begin{itemize}
 			\item $ 片側円錐だけのとき左辺の絶対値は外れる$
+			\item $ [30]e.g.;A(0,0,1),B(1,0,0),C(1,0,1)で,直線ACを直線ABのまわりに回転したときにできる曲面をE,直線ABを直線ACのまわりに回転したときにできる曲面をE'とする．それぞれのz=0での切り口は?$
+		\end{itemize}
+		\item $ 球と直線が共有点をもつ条件$
+		\begin{itemize}
+			\item $ [30]e.g.;点光源をA(1,0,3)においたとき,C:x^2+y^2+(z-1)^2=1のxy平面における影を図示せよ.$
+			\item $ [30]e.g.;影に含まれる点をP(X,Y,0)と置くと,直線AP上の任意の点Qはt \in \bm{R}を用いて$ \\ $ \vec{OQ}= t \vec{OP} + (1-t) \vec{OA} =(1+(X-1)t,Yt,3-3t)$ \\ と表される. \\ $ QがC上にあるとき,Cの方程式に代入して整理すると$ \\ $ \{ (X-1)^2+Y^2+9 \} t^2+2(X-7)t+4=0$ \\ $ CとAPが共有点をもつ条件は上式の判別式をDとすると$ \\ $ D/4 \geq 0$これを整理すると解を得る.
 		\end{itemize}
 	\end{itemize}
 	\item $ 放物線$
 	\begin{itemize}
+		\item $ \bm{「ある定点（焦点）からの距離とある定直線（準線）までの距離が等しい点の集合」}$
 		\item $ （放物線の準円）$
+		\item $．点F(O,p)を焦点とし直線y=-pを準
+		線とする放物線の方程式は定義からx^2=4py
+		$
 	\end{itemize}
 	\item $ 楕円$
 	\begin{itemize}
+		\item $ \bm{「2定点（焦点）からの距離の和が一定(=2 \times (長軸半径) )の点の集合」} \rightarrow 定義の利用 $
+		\item $ \frac{x^2}{a^2}+ \frac{y^2}{b^2}=1,(長軸の長さ)=2aのとき,焦点は( \pm \sqrt{a^2-b^2},0)$
+		\begin{itemize}
+			\item $ [29];A(1,0),B(-1,0),C:xy=1がありC上に点PをとるときAP+BPが最小になるのは？$
+			\item $ [29]e.g.(2);x^2+y^2=5に内接し(x-2)^2+y^2=1に外接する円の中心の軌跡？$
+		\end{itemize}
 		\item $ 楕円の準円$
 		\item $ 円の縮小,拡大$
 		\begin{itemize}
@@ -977,16 +1003,55 @@
 		\end{itemize}
 	\end{itemize}
 	\item $ 双曲線$
-	\item $ （双曲線の準円）$
+	\begin{itemize}
+		\item $ \bm{「2定点（焦点）からの距離の差（=2頂点間の距離）が一定である点の集合」}$
+		\item $ \frac{x^2}{a^2}- \frac{y^2}{b^2}=1のとき,焦点は( \pm \sqrt{a^2+b^2},0)$
+		\item $ （双曲線の準円）$
+		\item $ 双曲線型の積分I= \int \sqrt{x^2+a}dx:[28]e.g.$
+		\begin{itemize}
+			\item $ x= \frac{e^t - e^{-t}}{2}と置換する方法$
+			\begin{itemize}
+				\item $ \sqrt{x^2+1} = \frac{e^t + e^{-t}}{2}$
+				\item $ x + \sqrt{x^2+1} = e^t$
+			\end{itemize}
+			\item $ x= \frac{1}{2} \left( t - \frac{1}{t} \right)(t > 0)と置換する方法$
+			\begin{itemize}
+				\item $ t = \sqrt{x^2+1} + x, \frac{1}{t} = \sqrt{x^2+1} - x$
+			\end{itemize}
+			\item $ \pm \sqrt{x^2+a}+xと\pm \sqrt{x^2+a}-xは対をなす$
+			\item $ \pm (\sqrt{x^2+a}+x)(\pm \sqrt{x^2+a}-x) = a$
+			\item $ \pm \sqrt{x^2+1}+x = \frac{1}{\pm \sqrt{x^2+1}-x}とみると増減がわかりやすい?$
+			\item $ \int \frac{1}{\sqrt{1+x^2}}dx = \log(x+ \sqrt{x^2+1}) + C$
+			\item $ A^{\frac{1}{2}}をA^{-\frac{1}{2}}に変形して利用したい;e.g. \int^u_0 \sqrt{1+x^2}dxに上を適用したい[28]$
+			\begin{itemize}
+				\item $ 指数が1減るのは微分$
+				\item $ 積分なのに微分 \rightarrow 部分積分$
+			\end{itemize}
+			\item $ 双曲線y^2-x^2=1のパラメータ表示:y = \pm \sqrt{x^2+1}が根底にある$
+		\end{itemize}
+		\item $ 双曲線関数$
+		\begin{itemize}
+			\item $ \cosh x = \frac{e^t + e^{-t}}{2}, \sinh x = \frac{e^t - e^{-t}}{2}$
+			\item $ (\cosh t)' = \sinh t$
+			\item $ \cosh^{2} x - \sinh^{2} x = 1;双曲線x^2-y^2=1でx= \cosh t,y= \sinh tとパラメータ表示される$
+		\end{itemize}
+	\end{itemize}
 	\item $ 漸近線と接線$
 	\begin{itemize}
 		\item $ が成す三角形の面積が一定$
 		\item $ 接点は2交点の中点$
 	\end{itemize}
-	\item $ 曲線の長さ$
+	\item $ 曲線の長さ[28]$
 	\begin{itemize}
-		\item $ \int \sqrt{dx^2 + dy^2}$
+		\item $ \int \sqrt{(dx)^2 + (dy)^2}$
+		\item $ y= \log ( \cos x) (0 \leq x \leq \pi / 4)の長さ$
 		\item $ 双曲線関数$
+		\item $ y = \frac{1}{2}(e^x + e^{-x})(-a \leq x \leq a)の長さ$
+		\item $ 極方程式r=1+ \cos \theta (0 \leq \theta \leq \pi)の長さ$
+		\begin{itemize}
+			\item $(x,y)に媒介変数表示$
+			\item $和積公式$
+		\end{itemize}
 	\end{itemize}
 \end{itemize}
 
