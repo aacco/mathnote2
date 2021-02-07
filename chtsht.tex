@@ -218,6 +218,13 @@
 	\end{itemize}
 \end{itemize}
 
+\section{極座標}
+\begin{itemize}
+	\item $ [35]e.g.;r= \cos ( \theta + \frac{\pi}{4})をx,yの式にせよ$ 
+	\item $ [35]e.g.;r= \frac{1}{1+ \cos \theta})をx,yの式にせよ$ 
+	\item $ [35]でr= \cos \theta -aとすると?$
+\end{itemize}
+
 \section{複素数}
 \begin{itemize}
 	\item $ 図形$
@@ -467,6 +474,7 @@
 		\begin{itemize}
 			\item $x^2+y^2+z^2=1のときxyzの \max , \min :[43]e.g.$
 		\end{itemize}
+		\item 変数が2つなら領域を図示して考える:IAIIB$[2]$
 		\item $ コーシー・シュワルツの不等式$
 		\begin{itemize}
 			\item ${\displaystyle \left( \sum_{i=1}^n a_i^2 \right)}{\displaystyle \left( \sum_{i=1}^n b_i^2 \right)}\geq{\displaystyle \left( \sum_{i=1}^n a_ib_i \right)^2}$
@@ -918,7 +926,7 @@
 	\item $ \Leftrightarrow「方程式AかつBが重解をもつ」$
 	\item $ 手法$
 	\begin{itemize}
-		\item $ 接点の設定$
+		\item $ まず接点の設定$
 		\begin{itemize}
 			\item $ 楕円ならまず三角関数の利用$
 			\begin{itemize}
@@ -930,15 +938,16 @@
 				\begin{enumerate}
 					\item $ 式はp^2 - q^2 = 1$
 				\end{enumerate}
-				\item $ 三角関数は便利そうなら使う$
+				\item $ 三角関数は便利そうなら使う[33]$
 			\end{itemize}
 		\end{itemize}
 		\item $ 接線の設定 (y軸と平行かどうか)$
 		\begin{itemize}
 			\item $ とりわけ,傾きをmとおく$
 			\begin{itemize}
-				\item $ 「2接線が直交」（準円）$
+				\item $ 「2接線が直交」（準円）:[31]$
 				\item $ m_1m_2 = -1（解と係数の関係）$
+				\item $ [31]; \frac{x^2}{17}+\frac{y^2}{8}=1の外部の点P(a,b)から引いた2接線が直交するようなPの軌跡を求めよ.$
 			\end{itemize}
 			\item $ \tan と関連して…$
 		\end{itemize}
@@ -985,9 +994,21 @@
 			\item $ [29];A(1,0),B(-1,0),C:xy=1がありC上に点PをとるときAP+BPが最小になるのは？$
 			\item $ [29]e.g.(2);x^2+y^2=5に内接し(x-2)^2+y^2=1に外接する円の中心の軌跡？$
 		\end{itemize}
-		\item $ 楕円の準円$
-		\item $ 円の縮小,拡大$
+		\item $ 楕円の準円;x^2+y^2=a^2+b^2(\frac{x^2}{a^2}+ \frac{y^2}{b^2}=1のとき):[31]$
 		\begin{itemize}
+			\item $ [31]e.g.;\frac{x^2}{a^2}+ \frac{y^2}{b^2}=1に4点で外接する長方形を考える.この
+			ような長方形の対角線の長さは，長方形の取り方によらず一定であ
+			ることを証明しなさい． また対角線の長さをa,bを用いて表しなさ
+			い$
+			\item $ [31]e.g.;軸の長さが4で，短軸の長さが2の楕円を考える． この楕
+			円が第一象限(すなわち \{(x,y)|x \geq 0,y \geq 0 \})においてx軸, y軸
+			の両方に接しつつ可能なすべての位置にわたって動くとき， この楕
+			円の中心の描く軌跡を求めよ．$
+		\end{itemize}
+		\item $ 条件が変わらないなら円の縮小,拡大が可能$
+		\begin{itemize}
+			\item 面接,交点の個数,共有点の座標などに使える
+			\item 角度や長さは変わるので使えない
 			\item $ 実数の稠密性$
 			\item $ 「接する条件」は拡縮前後で不変$
 			\begin{itemize}
@@ -995,11 +1016,27 @@
 				\item $ 判別式$
 			\end{itemize}
 		\end{itemize}
-		\item $ 焦点から楕円上の点の距離はキレイな式になる$
-		\item $ ax + by = 1を(a,b)を極とする円x^2+y^2=1の極線という$
+		\item $ 焦点から楕円上の点の距離はキレイな式になる:xまたはyの差の定数倍[33]$
+		\item $ ax + by = 1を(a,b)を極とする円x^2+y^2=1の極線という[32]$
 		\begin{itemize}
-			\item $ 円周上なら接線と一致$
-			\item $ 外部の点なら2接線の接点を通る直線$
+			\item $ (a,b)が円周上にあるなら接線と一致$
+			\item $ 外部の点なら(a,b)を通る2接線の接点を通る直線$
+			\item $ [32];Cを曲線a^2x^2+y2=1, lを直線y=ax+2aとする。 ただ
+				し， aは正の定数である．$ \\ 
+				$ (1)Cとlとが異なる2点で交わるためのaの範囲を求めよ．$ \\
+				$ (2) C上の点(x_O,y_0)における接線の方程式を求めよ．$ \\
+				$ (3) (1)における交点をP, Qとし，点PにおけるCの接線と点Qに
+				おけるCの接線との交点をR(X､ Y）とする． aが(1)の範囲を動く
+				とき, X, Yの関係式とYの範囲を求めよ．$
+			\item $ P,Qをそれぞれ(x_p,y_p),(x_q,y_q）
+			とおくと，直線PR, QRの方程式は$ \\
+			$a^2x_px+y_py=1, a^2x_qx+y_qy=1$ \\
+			$となる． これらがR(X,Y)を通ることより$ \\
+			$ a^2x_pX+y_pY=1, a^2x_qX+y_qY=1$ \\
+			$ この2式は2点P,Qが$ \\
+			$ a^2Xx+Yy=1$ \\
+			$ 上にあることを示している.つまり上式はlと一致する.ゆえに係数を比較して$ \\
+			$ X = - \frac{1}{2a^2} , Y = \frac{1}{2a}$$(以下略)$
 		\end{itemize}
 	\end{itemize}
 	\item $ 双曲線$
